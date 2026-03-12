@@ -83,9 +83,14 @@ const Hero = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [isMatrixActive]);
 
-    // Keep terminal scrolled to bottom
+    // Keep terminal scrolled to bottom without scrolling page
     useEffect(() => {
-        endOfTerminalRef.current?.scrollIntoView({ behavior: 'smooth' });
+        if (endOfTerminalRef.current) {
+            const terminalContainer = endOfTerminalRef.current.parentElement;
+            if (terminalContainer) {
+                terminalContainer.scrollTop = terminalContainer.scrollHeight;
+            }
+        }
     }, [history]);
 
     return (
