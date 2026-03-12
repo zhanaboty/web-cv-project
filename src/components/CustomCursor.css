@@ -1,0 +1,33 @@
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.custom-cursor.hovering {
+    transform: translate(-50%, -50%) scale(2.5);
+    background-color: var(--accent-cyan);
+    mix-blend-mode: screen;
+    opacity: 0.8;
+}
+
+body.cursor-none {
+    cursor: none;
+}
+
+body.cursor-none a,
+body.cursor-none button,
+body.cursor-none .social-icon,
+body.cursor-none .btn-primary {
+    cursor: none;
+}

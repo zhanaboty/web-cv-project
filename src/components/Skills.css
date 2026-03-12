@@ -1,0 +1,138 @@
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.skill-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 40px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.frontend-card::before {
+    background-color: var(--accent-cyan);
+}
+
+.devops-card::before {
+    background-color: var(--accent-green);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.frontend-icon {
+    color: var(--accent-cyan);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.devops-icon {
+    color: var(--accent-green);
+    border: 1px solid rgba(63, 185, 80, 0.2);
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.card-desc {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.frontend-card .tag:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+.devops-card .tag:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .skill-card {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        padding: 24px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .card-desc {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .tag {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
