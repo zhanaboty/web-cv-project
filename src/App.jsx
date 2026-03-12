@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import CustomCursor from './components/CustomCursor';
 
+
 function App() {
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
