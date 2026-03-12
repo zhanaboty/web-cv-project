@@ -18,15 +18,15 @@
 }
 
 .light-mode {
-  --bg-color: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-card: #e5e9f0;
-  --text-main: #24292f;
-  --text-muted: #57606a;
+  --bg-color: #f8f9fa;
+  --bg-secondary: #f1f3f5;
+  --bg-card: #ffffff;
+  --text-main: #212529;
+  --text-muted: #868e96;
 
-  --accent-cyan: #0969da;
-  --accent-green: #1a7f37;
-  --accent-purple: #8250df;
+  --accent-cyan: #339af0;
+  --accent-green: #40c057;
+  --accent-purple: #845ef7;
 }
 
 .top-controls {
