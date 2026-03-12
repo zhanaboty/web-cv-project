@@ -9,7 +9,7 @@ import GithubStats from './components/GithubStats';
 import Contact from './components/Contact';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import CustomCursor from './components/CustomCursor';
-
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   useEffect(() => {
@@ -44,7 +44,12 @@ function App() {
   return (
     <div className="portfolio-app">
       <CustomCursor />
-      <LanguageSwitcher />
+
+      <div className="top-controls">
+        <ThemeToggle />
+        <LanguageSwitcher />
+      </div>
+
       <Hero />
       <Skills />
       <Projects />

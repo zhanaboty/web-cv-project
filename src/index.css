@@ -17,6 +17,28 @@
   --transition: 0.3s ease;
 }
 
+.light-mode {
+  --bg-color: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-card: #e5e9f0;
+  --text-main: #24292f;
+  --text-muted: #57606a;
+
+  --accent-cyan: #0969da;
+  --accent-green: #1a7f37;
+  --accent-purple: #8250df;
+}
+
+.top-controls {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
