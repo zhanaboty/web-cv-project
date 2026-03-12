@@ -26,6 +26,7 @@ function App() {
       infinite: false,
     });
 
+
     let rafId;
 
     function raf(time) {
